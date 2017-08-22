@@ -165,8 +165,10 @@ public class TaskFragment extends Fragment {
             try{
                 jsonObject = jsonArray.getJSONObject(i);
                 task.setTitle(jsonObject.getString("Title"));
-                task.setBody(jsonObject.getString("UserName"));
-                task.setUpvotes(Integer.parseInt(jsonObject.getString("UserEmail")));
+                task.setBody(jsonObject.getString("TaskBody"));
+                task.setUpvotes(Integer.parseInt(jsonObject.getString("Upvotes")));
+                task.setWorkings(Integer.parseInt(jsonObject.getString("PeopleWorking")));
+                task.setComments(Integer.parseInt(jsonObject.getString("Comments")));
             }catch (Exception e){e.printStackTrace();}
             tasks.add(task);
         }
