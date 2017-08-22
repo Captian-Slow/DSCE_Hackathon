@@ -10,6 +10,23 @@ public class Task {
     private String body;
     private int upvotes;
     private int comments;
+    private String UserName, UserEmail;
+
+    public String getUserName() {
+        return UserName;
+    }
+
+    public void setUserName(String userName) {
+        UserName = userName;
+    }
+
+    public String getUserEmail() {
+        return UserEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        UserEmail = userEmail;
+    }
 
     public int getComments() {
         return comments;
