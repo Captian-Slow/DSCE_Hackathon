@@ -6,5 +6,5 @@ package com.hackathon.dsce.amit.dosomething;
 
 class UrlStrings {
 
-    public final static String taskUrl = "https://localhost:4000/task";
+    public final static String taskUrl = "http://192.168.1.100:4000/task";
 }

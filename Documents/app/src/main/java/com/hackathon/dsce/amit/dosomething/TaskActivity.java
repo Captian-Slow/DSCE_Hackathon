@@ -20,7 +20,6 @@ import android.widget.Toast;
 public class TaskActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private Button button;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +56,9 @@ public class TaskActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.taskFrame, new TaskFragment()).commit();
 
     }
 

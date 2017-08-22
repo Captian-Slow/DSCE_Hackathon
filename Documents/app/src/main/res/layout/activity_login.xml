@@ -130,7 +130,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="0.74"
-            android:src="@drawable/hub_logo" />
+            />
 
         <LinearLayout
             android:layout_width="wrap_content"

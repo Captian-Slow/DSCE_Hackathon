@@ -123,12 +123,8 @@ public class TaskFragment extends Fragment {
     private void sendAndPrintResponse() {
         String modifiedUrl;
 
-        if(User.getIsAdmin()){
-            modifiedUrl = notificationURL + "?year=admin";
-        }
-        else {
-            modifiedUrl = notificationURL + "?year=" + User.getYear();
-        }
+        modifiedUrl = notificationURL + "/";
+
         //Showing a progress dialog
         final ProgressDialog loading = ProgressDialog.show(this.getContext(),"Loading Data", "Please wait...",false,false);
         requestQueue = VolleySingleton.getInstance(this.getContext()).getRequestQueue(this.getContext());
@@ -187,7 +183,7 @@ public class TaskFragment extends Fragment {
         getActivity().startService(serviceIntent);
         */
         //Finally initializing our adapter
-        adapter = new CardAdapter(tasks, this.getContext());
+        adapter = new TaskAdapter(tasks, this.getContext());
         //Adding adapter to recyclerView
         recyclerView.setAdapter(adapter);
         swipeLayout.setRefreshing(false);
