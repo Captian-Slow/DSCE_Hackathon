@@ -1,0 +1,11 @@
+DO SOMETHING
+
+- Posting pictures of areas in need of improvements. (called tasks)
+- Multiple categories ranging from household tasks to areawide tasks.
+- A vivion and possibility that NGO's can use the app to help people using the app.
+- A feature to let users post on a task that they are "doing something", or add to the problems 	of the task in hand.
+- Ability to upvote/downvote "tasks" that users want to happen more/less.
+- The app developed will sort the tasks based on "fresh", "trending", and "most help wanted".
+- User login system (Using a node.js based server and a mongodb database).
+- Initial front-end systems on android and possible web based in the future.
+- 
