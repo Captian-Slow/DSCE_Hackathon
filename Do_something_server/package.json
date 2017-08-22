@@ -1,0 +1,22 @@
+{
+  "name": "dsce_hackaton",
+  "version": "1.0.0",
+  "description": "An app for the hackathon called \"Do something\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebournegenius/DSCE_Hackathon.git"
+  },
+  "author": "Amit Kumar Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thebournegenius/DSCE_Hackathon/issues"
+  },
+  "homepage": "https://github.com/thebournegenius/DSCE_Hackathon#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
