@@ -2,34 +2,48 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_trending_tasks"
+            android:icon="@drawable/ic_trend_task"
+            android:title="Trending Tasks" />
+
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_new_task"
+            android:icon="@drawable/ic_add"
+            android:title="Add a Task" />
+
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/usrusr"
+            android:title="Profile" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_my_tasks"
+            android:icon="@drawable/ic_my_tasks"
+            android:title="My Tasks" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings" />
+        <item
+            android:id="@+id/nav_logout"
+
+            android:title="Logout" />
+
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Categories">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_cat_all"
+                android:title="All" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/nav_cat_env"
+                android:title="Environment" />
+
+            <item
+                android:id="@+id/nav_cat_neigh"
+                android:title="Neighbourhood" />
         </menu>
     </item>
 

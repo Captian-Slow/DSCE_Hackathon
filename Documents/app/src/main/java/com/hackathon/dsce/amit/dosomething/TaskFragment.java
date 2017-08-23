@@ -98,7 +98,7 @@ public class TaskFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_task, container, false);
-        setHasOptionsMenu(true);
+        //setHasOptionsMenu(true);
         //Initializing Views
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         swipeLayout = (SwipeRefreshLayout) view.findViewById(R.id.swiperefresh);
@@ -187,6 +187,7 @@ public class TaskFragment extends Fragment {
         getActivity().startService(serviceIntent);
         */
         //Finally initializing our adapter
+        //tasks.sort();
         adapter = new TaskAdapter(tasks, this.getContext());
         //Adding adapter to recyclerView
         recyclerView.setAdapter(adapter);

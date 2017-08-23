@@ -110,7 +110,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
         holder.dwnVoteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                task.setUpvotes(task.getUpvotes() - 1);
+                holder.upvotes.setText(String.valueOf(task.getUpvotes()));
+                sendAndPrintResponse("Upvotes", task.getUserEmail(), task.getTitle(), Integer.toString(task.getUpvotes()));
             }
         });
 
@@ -173,9 +175,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
                     intent.putExtra("body", taskBodyTextView.getText());
                     intent.putExtra("date", dateUploadedTextView.getText());
                     intent.putExtra("upvotes", upvotes.getText());
-                    intent.putExtra("dwnVotes", dwnVotes.getText());
-                    intent.putExtra("workings", workings.getText());
-                    intent.putExtra("comments", comments.getText());
+                    intent.putExtra("dwnVotes", String.valueOf(dwnVotes.getText()));
+                    intent.putExtra("workings", String.valueOf(workings.getText()));
+                    intent.putExtra("comments", String.valueOf(comments.getText()));
                     context.startActivity(intent);
                 }
             });

@@ -1,10 +1,12 @@
 package com.hackathon.dsce.amit.dosomething;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -27,6 +29,17 @@ public class TaskActivity extends AppCompatActivity
         setContentView(R.layout.activity_task);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isFirstRun", true);
+        //Toast.makeText(this, isFirstRun.toString(), Toast.LENGTH_SHORT).show();
+        Log.d("ALERT !!", isFirstRun.toString());
+        if(isFirstRun || !User.getIsLoggedin())
+        {
+            Intent intent = new Intent(TaskActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+            //Toast.makeText(this, "FIRST RUN t", Toast.LENGTH_LONG).show();
+        }
         /*
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -91,19 +104,27 @@ public class TaskActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
+        if (id == R.id.nav_profile) {
+            fragmentTransaction.replace(R.id.taskFrame, new ProfileFragment()).commit();
+        } else if (id == R.id.nav_my_tasks) {
 
-        } else if (id == R.id.nav_manage) {
+        }else if (id == R.id.nav_new_task) {
+            fragmentTransaction.replace(R.id.taskFrame, new NewTaskFragment()).commit();
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_settings) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_cat_all) {
 
+        } else if (id == R.id.nav_cat_env) {
+
+        } else if (id == R.id.nav_cat_neigh) {
+
+        }else if (id == R.id.nav_trending_tasks) {
+            fragmentTransaction.replace(R.id.taskFrame, new TaskFragment()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
