@@ -1,5 +1,5 @@
 # DSCE_Hackathon #
-The **Do Something** DSCE Hackathon project (1st place)
+The **Do Something** was part of the 24hr DSCE Socio Tech Hackathon (22nd - 23rd August 2017) project (1st place)
 
 A REST platform for collaborative social effort and awareness. **Do Something** refers to the idea of people taking an initiative to "Do Something" about thier surroundings insted of complaining by collaborative effort.
 
